@@ -8,6 +8,8 @@ build/
 # Test and coverage output
 coverage/
 .vitest/
+.omc/
+.omx/
 
 # Logs
 *.log
