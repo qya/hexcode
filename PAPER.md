@@ -23,25 +23,25 @@ We define the hexagonal grid using flat-topped hexagons under axial coordinates 
 
 For a hexagon of outer radius (distance from center to vertex) $s$, the grid spacing between adjacent centers is $d = s\sqrt{3}$. The conversion from axial coordinates $(q, r)$ to Cartesian coordinates $(x, y)$ is defined as:
 
-\[
+$$
 x = s \cdot \frac{3}{2} \cdot q
-\]
-\[
+$$
+$$
 y = s \cdot \sqrt{3} \cdot \left(r + \frac{q}{2}\right)
-\]
+$$
 
 The distance between any cell center and all six of its immediate neighbors is constant:
 
-\[
+$$
 D = \sqrt{\Delta x^2 + \Delta y^2} = s\sqrt{3}
-\]
+$$
 
 ### 2.2 Tiling Density
 A hexagonal lattice provides a denser tiling than a square grid. The area of a single hexagonal cell is:
 
-\[
+$$
 A_{\text{hex}} = \frac{3\sqrt{3}}{2} s^2 \approx 2.598 s^2
-\]
+$$
 
 Compared to a square module of width $w = s\sqrt{3}$ (matching the pitch), the hexagonal area is smaller, allowing more modules to be packed into the same circumscribed print area.
 
@@ -78,9 +78,9 @@ During capture, the decoder uses local calibration cells to construct a luminanc
 ### 5.1 Local Six-Neighbor Majority Voting
 In optical scanning, high-frequency noise or localized glare can corrupt cell sampling. Since every data cell $C_{q, r}$ is bounded by six neighbors:
 
-\[
+$$
 N(C_{q, r}) = \{ C_{q+1, r}, C_{q+1, r-1}, C_{q, r-1}, C_{q-1, r}, C_{q-1, r+1}, C_{q, r+1} \}
-\]
+$$
 
 The decoder performs a weighted consensus pass. If a cell’s measured luminance falls near a decision boundary, its value is adjusted to match the weighted average of its neighbors, resolving local sampling ambiguity before parity calculations.
 
