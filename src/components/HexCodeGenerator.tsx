@@ -33,25 +33,6 @@ const CONFIG_TABS = [
 
 type ConfigTabId = (typeof CONFIG_TABS)[number]['id'];
 
-/* ─── Toggle Switch ─── */
-function Toggle({
-  checked,
-  onChange,
-  label,
-}: {
-  checked: boolean;
-  onChange: (val: boolean) => void;
-  label: string;
-}) {
-  return (
-    <div className="toggle-wrap" onClick={() => onChange(!checked)}>
-      <div className={`toggle-track ${checked ? 'on' : ''}`}>
-        <div className="toggle-thumb" />
-      </div>
-      <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-secondary)' }}>{label}</span>
-    </div>
-  );
-}
 
 /* ─── Main Component ─── */
 interface Props {

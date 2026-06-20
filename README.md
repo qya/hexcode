@@ -2,6 +2,8 @@
 
 **⬡code** is a high-density 2D barcode engine built on flat-top hexagonal cells instead of classic square QR modules. The system features a modern Web UI generator, a React/TypeScript frontend, and a high-performance **Rust decoder** compiled to **WebAssembly** for fast sub-pixel raster grid sampling.
 
+![⬡code Hexagonal Barcode Engine Interface](public/screenshot.png)
+
 ---
 
 ## Why Hexagonal?
